@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<script>
+    axios.get('http://localhost:3000/movies').then(response => {
+        
+        const movies = response.data
+        let html = ''
+        movies.forEach((movie) => {
+            html += ` 
+            <div data-id= "${movie.id}">
+                <h3>${movie.title}</h3>
+                <span>year: ${movie.year}</span>
+                <span>director: ${movie.director}</span>
+                <button>Delete</button>
+           </div>
+            `
+        })
+        document.querySelector('.container').innerHTML = html
+        document.addEventListener("click", e => {
+            if(e.target.matches("button")){
+                const div = e.target.closest('div')
+                const id = div.dataset.id
+
+                axios.delete('http://localhost:3000/movies/'+id).then(response => {
+                    if(response.success){
+                        div.remove()
+                    }
+                })
+            }
+        })
+    })
+</script>
+<body>
+    <div class="container"></div>
+   
+</body>
+</html>

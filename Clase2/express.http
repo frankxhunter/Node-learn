@@ -1,0 +1,17 @@
+### Para obtener a charizard
+GET http://localhost:3000/pokemon/charizard
+
+### Error 404
+GET http://localhost:3000/pokemon/asdfasfasfasd
+### Para crear un pokemon
+POST http://localhost:3000/pokemon/
+Content-type: application/json
+
+{
+    "name": "Charizard",
+    "type": "Fire",
+    "move": [
+        "Fly",
+        "flare"
+        ]
+}

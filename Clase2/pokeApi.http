@@ -1,0 +1,20 @@
+### Para obtener a ditto
+GET http://localhost:3000/pokemon/ditto
+
+### Para obtener a charizard
+GET http://localhost:3000/pokemon/charizard
+
+### Error 404
+GET http://localhost:3000/asdfasfasfasd
+### Para crear un pokemon
+POST http://localhost:3000/pokemon/charizard
+Content-type: application/json
+
+{
+    "name": "Charizard",
+    "type": "Fire",
+    "move": [
+        "Fly",
+        "flare"
+        ]
+}

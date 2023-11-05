@@ -1,0 +1,11 @@
+[
+    {
+        "username": "Frank",
+        "password": "frank",
+        "info": {
+            "nota": "estos son notas",
+            "contacto": "estos son numeros de contactos"
+        }
+    }
+
+]

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victoria</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container"></div>
+    
+    <script>
+        document.querySelector('.container').innerHTML = '<h1>hola</h1>'
+        fetch('https://e854-2a0c-5a87-6006-8d00-b048-58a3-af26-dfe1.ngrok-free.app/users/frank/frank').then(response => {
+            console.log("hola")
+            console.log(response.data)
+            
+        })
+
+    </script>
+</body>
+</html>

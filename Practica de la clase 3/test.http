@@ -1,0 +1,2 @@
+### Para probar el get user
+GET http://localhost:3001/users/Frank/frank
